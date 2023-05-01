@@ -5,9 +5,9 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.option.KeyBinding;
-import net.minecraft.client.resource.language.I18n;
+//import net.minecraft.client.resource.language.I18n;
 import net.minecraft.client.util.InputUtil;
-import net.minecraft.client.util.NarratorManager;
+//import net.minecraft.client.util.NarratorManager;
 import net.shoaibkhan.ncc.config.Config;
 
 @Environment(EnvType.CLIENT)
@@ -48,13 +48,13 @@ public class ClientInitializer implements ClientModInitializer {
                                     .then(net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.literal("off").executes(
                                             source -> {
                                                 Config.set(Config.getNarratorkey(), false);
-                                                NarratorManager.INSTANCE.narrate(I18n.translate("narrate.nccbyshoaibkhan.narratorOff"));
+                                                //NarratorManager.INSTANCE.narrate(I18n.translate("narrate.nccbyshoaibkhan.narratorOff"));
                                                 return 1;
                                             }))
                                     .then(net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.literal("on").executes(
                                             source -> {
                                                 Config.set(Config.getNarratorkey(), true);
-                                                NarratorManager.INSTANCE.narrate(I18n.translate("narrate.nccbyshoaibkhan.narratorOn"));
+                                                //NarratorManager.INSTANCE.narrate(I18n.translate("narrate.nccbyshoaibkhan.narratorOn"));
                                                 return 1;
                                             }))
                             ));
