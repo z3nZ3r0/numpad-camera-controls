@@ -38,6 +38,6 @@ public class BridgingAngle {
 
         Vec3d vec3d = new Vec3d(pos.x+xx , pos.y+yy, pos.z+zz);
         client.player.lookAt(EntityAnchorArgumentType.EntityAnchor.FEET,vec3d);
-        if(Config.get(Config.getNarratorkey())) NarratorManager.INSTANCE.narrate("Bridging Angle");
+        //if(Config.get(Config.getNarratorkey())) NarratorManager.INSTANCE.narrate("Bridging Angle");
     }
 }

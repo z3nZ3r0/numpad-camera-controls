@@ -1,6 +1,7 @@
 package net.shoaibkhan.ncc;
 
 import java.util.Locale;
+import java.util.Vector;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -8,23 +9,24 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.client.util.InputUtil;
-import net.minecraft.client.util.NarratorManager;
+//import net.minecraft.client.util.NarratorManager;
 import net.minecraft.command.argument.EntityAnchorArgumentType;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.Vec3f;
+//import net.minecraft.util.math.Vec3f;
+import org.joml.Vector3f;
 import net.shoaibkhan.ncc.config.Config;
 
 @Environment(EnvType.CLIENT)
 public class HudRenderCallbackClass {
     private MinecraftClient client;
-    private NarratorManager narratorManager;
+    //private NarratorManager narratorManager;
 
     public HudRenderCallbackClass() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             this.client = client;
-            this.narratorManager = NarratorManager.INSTANCE;
+            //this.narratorManager = NarratorManager.INSTANCE;
             if (client.player != null && client.currentScreen == null) {
                 try {
                     Vec3d pos = client.player.getPos();
@@ -100,7 +102,7 @@ public class HudRenderCallbackClass {
 
         if (Config.get(Config.getNarratorkey())) {
             key = "narrate.nccbyshoaibkhan." + key;
-            narratorManager.narrate(I18n.translate(key));
+            //narratorManager.narrate(I18n.translate(key));
         }
     }
 
@@ -111,8 +113,8 @@ public class HudRenderCallbackClass {
     private void centreAxisReverse(Vec3d pos) {
         assert client.player != null;
         Direction dir = client.player.getHorizontalFacing().getOpposite();
-        Vec3f unit = dir.getUnitVector();
-        Vec3d vec3d = pos.add(unit.getX(), unit.getY(), unit.getZ());
+        Vector3f unit = dir.getUnitVector();
+        Vec3d vec3d = pos.add(unit.x(), unit.y(), unit.z());
         client.player.lookAt(EntityAnchorArgumentType.EntityAnchor.FEET, vec3d);
         narrateDirection(dir);
     }
@@ -120,8 +122,8 @@ public class HudRenderCallbackClass {
     private void centreAxis(Vec3d pos) {
         assert client.player != null;
         Direction dir = client.player.getHorizontalFacing();
-        Vec3f unit = dir.getUnitVector();
-        Vec3d vec3d = pos.add(unit.getX(), unit.getY(), unit.getZ());
+        Vector3f unit = dir.getUnitVector();
+        Vec3d vec3d = pos.add(unit.x(), unit.y(), unit.z());
         client.player.lookAt(EntityAnchorArgumentType.EntityAnchor.FEET, vec3d);
         narrateDirection(dir);
     }
