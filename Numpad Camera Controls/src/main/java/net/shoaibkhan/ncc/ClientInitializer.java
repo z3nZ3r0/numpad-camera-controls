@@ -4,10 +4,10 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+
 import net.minecraft.client.option.KeyBinding;
-//import net.minecraft.client.resource.language.I18n;
 import net.minecraft.client.util.InputUtil;
-//import net.minecraft.client.util.NarratorManager;
+
 import net.shoaibkhan.ncc.config.Config;
 
 @Environment(EnvType.CLIENT)
@@ -41,6 +41,7 @@ public class ClientInitializer implements ClientModInitializer {
                 }));*/
 
         // post 1.19
+/*
         net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
             dispatcher.register(
                     net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.literal("ncc")
@@ -64,7 +65,7 @@ public class ClientInitializer implements ClientModInitializer {
                         return 1;
                     }));
         });
-
+        */
         lookSouth = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.nccbyshoaibkhan.num_1", InputUtil.Type.KEYSYM,
                 InputUtil.fromTranslationKey("key.keyboard.keypad.1").getCode(), "category.nccbyshoaibkhan.numpad"));
         rotateDownwards = KeyBindingHelper
