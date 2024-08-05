@@ -4,15 +4,23 @@ ___
 
 ## Description
 
-This is a ___Minecraft Fabric___ mod which lets the player control the camera with numpad/keypad keys. This mod supports the narrator for accessibility. All keybindings/hotkeys are re-configurable. Join the discord server to get updates, request feature or report bugs.
-
-| [Discord Server](https://discord.gg/yQjjsDqWQX) | [Issues](https://github.com/accessible-minecraft/numpad-camera-controls/issues) | [Download](https://www.curseforge.com/minecraft/mc-mods/numpad-keypad-camera-controls/files) | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/numpad-keypad-camera-controls) |
+This is a ___Minecraft Fabric___ mod which lets the player control the camera with numpad/keypad keys. All keybindings/hotkeys are re-configurable.
 
 ## Requirements
 
-This mod only requires __[Fabric](https://fabricmc.net/wiki/install)__ to be installed and the supported minecraft versions are from __1.16.x__ to __1.19.x__
+This mod only requires __[Fabric](https://fabricmc.net/wiki/install)__ to be installed and the supported minecraft versions are 1.21
 
-## Changelog 
+## Who developed this mod ?
+This mod was created by __[khanshoaib3](https://github.com/khanshoaib3)__, he writes all the code but he stop maintaining it.
+My only contribution is updating some part to keep the code working with the latest version of Minecraft.
+I barely understand why I'm doing...
+
+## Changelog
+
+### 1.5.3
+
+- Removing narrator and command feature _(because i'm a noob and it's simpler to maintain for me)_
+- Updated to 1.21
 
 ### 1.5.2 
 
@@ -24,7 +32,7 @@ This mod only requires __[Fabric](https://fabricmc.net/wiki/install)__ to be ins
 
 - Updated mod to minecraft v1.18.1 
 
-## New keybindings/hotkeys
+## keybindings/hotkeys
 
 - **Numpad** 7 :-  Look North
 - **Numpad** 1 :-  Look South
@@ -40,15 +48,3 @@ This mod only requires __[Fabric](https://fabricmc.net/wiki/install)__ to be ins
 - **Alt + Numpad 6** :- Rotate Right by 15 degree
 - **Alt + Numpad 8** :- Rotate Up by 15 degree
 - **Alt + Numpad 2** :- Rotate Down by 15 degree
-
-## New Commands
-
-- **ncc narrator on** = Enable narrator
-- **ncc narrator off** = Disable narrator
-- **ba** = Look at an angle suitable for bridging
-
-## Contact
-
-- Discord Server - https://discord.gg/yQjjsDqWQX
-- Discord - Shoaib#9319
-- Email - mdshoaibkhan.1999@gmail.com
